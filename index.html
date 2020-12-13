@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="app.js"></script>
 </head>
+
 <body>
 
     <div class="mainBody">
+
         <div>
-            <form onsubmit="return ageChecker()">
-            <h3>DATE OF BIRTH CALCULATOR</h3>
-          <label>Enter Date Of Birth</label>  
-          <input required type="date" id="dob">
-            <button>
-                Check
-            </button>
 
-            <p id="yourage">
+            <form onsubmit="return checkAge()">
 
-            </p>
-        </form>
+                <h3>AGE CALCULATOR</h3>
+                <label>Enter Date Of Birth</label>
+
+                <input type="date" id="dateOfBirth" required>
+
+                <button> Calculate </button>
+
+                <p id="age"></p>
+
+            </form>
+
         </div>
 
-<hr>
     </div>
-    
+
 </body>
+
 </html>

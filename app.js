@@ -1,27 +1,32 @@
-const ageChecker = ()=>{
+const checkAge = () => {
 
-    setInterval(function(){
-        var dob = document.getElementById("dob").value;
+    setInterval(function () {
+        var dob = document.getElementById("dateOfBirth").value;
 
-var date  = new Date(dob);
-//    var date  = new Date("4 april,1994");
- var timeFixing = new Date();
+        var date = new Date(dob);
+        var timeFixing = new Date();
 
-var  fixingMili = timeFixing.getTime();
+        var fixingMili = timeFixing.getTime();
 
- dateMili = date.getTime();
- 
- diff = fixingMili - dateMili; 
+        dateMili = date.getTime();
 
- myDob = Math.floor (diff/(1000*60*60*24*30*12));
- month = Math.floor (diff/(1000*60*60*24*30));
- days = Math.floor (diff/(1000*60*60*24));
- hours = Math.floor (diff/(1000*60*60));
- minutes = Math.floor (diff/(1000*60));
- seconds = Math.floor (diff/(1000));
- smallest = Math.floor (diff);
-document.getElementById("yourage").innerHTML = ` <b>Age</b>: ${myDob} <br> <b>Month:</b>:${month} <br> <b>Days:</b>:${days} <br>  <b>Hours:</b>:${hours} <br> <b>Minutes:</b>:${minutes} <br> <b>Seconds:</b>:${seconds} <br> <b>Milliseconds:</b> ${smallest}`
+        diff = fixingMili - dateMili;
 
-    },1000)
-   return false;
+        myDob = Math.floor(diff / (1000 * 60 * 60 * 24 * 30 * 12));
+        month = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor(diff / (1000 * 60 * 60));
+        minutes = Math.floor(diff / (1000 * 60));
+        seconds = Math.floor(diff / (1000));
+        smallest = Math.floor(diff);
+        document.getElementById("age").innerHTML = ` <b>Age</b>: ${myDob} <br>
+          <b>Months:</b>:${month} <br>
+          <b>Days:</b>:${days} <br> 
+          <b>Hours:</b>:${hours} <br>
+          <b>Minutes:</b>:${minutes} <br> 
+          <b>Seconds:</b>:${seconds} <br> 
+          <b>Milliseconds:</b> ${smallest}`
+
+    }, 1000)
+    return false;
 }
